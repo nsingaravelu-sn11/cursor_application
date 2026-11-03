@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Server monitoring{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="brand">
+        <p class="eyebrow">Internal demo</p>
+        <a class="brand-name" href="{{ url_for('home') }}">Server monitoring</a>
+      </div>
+      <p class="header-note">Linux servers</p>
+    </header>
+    <main class="page">
+      {% block content %}{% endblock %}
+    </main>
+    <footer class="site-footer">
+      <p>Read-only monitoring shell for internal infrastructure and application teams.</p>
+    </footer>
+  </body>
+</html>

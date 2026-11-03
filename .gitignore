@@ -1,0 +1,27 @@
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+
+# Databases and key material
+*.db
+*.sqlite
+*.sqlite3
+*.pem
+*.key
+*.p12
+*.pfx
+instance/
+
+# Python environments and build output
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+dist/
+build/
+*.egg-info/
+
+# Tool caches
+.pytest_cache/
+.mypy_cache/

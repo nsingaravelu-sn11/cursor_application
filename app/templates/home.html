@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}Server monitoring{% endblock %}
+
+{% block content %}
+  <section class="panel intro">
+    <p class="eyebrow">Placeholder</p>
+    <h1>A quiet place to see server health</h1>
+    <p class="lede">
+      This page is the visual shell for the demo. Live CPU, memory, network,
+      disk, and port figures will appear here after servers are connected.
+    </p>
+  </section>
+
+  <section class="panel" aria-labelledby="status-heading">
+    <h2 id="status-heading">Status labels</h2>
+    <p class="section-copy">
+      Each state uses a text label with its color, so the meaning stays clear
+      on its own.
+    </p>
+    <ul class="status-list">
+      <li class="status-card">
+        <span class="status status-healthy"><span class="status-dot" aria-hidden="true"></span>Healthy</span>
+        <p>The latest poll succeeded, and CPU and memory are both under 80%.</p>
+      </li>
+      <li class="status-card">
+        <span class="status status-warning"><span class="status-dot" aria-hidden="true"></span>Warning</span>
+        <p>CPU or memory is at least 80% and under 95%. The label names the resource.</p>
+      </li>
+      <li class="status-card">
+        <span class="status status-critical"><span class="status-dot" aria-hidden="true"></span>Critical</span>
+        <p>CPU or memory is at least 95%. The more severe resource sets the label.</p>
+      </li>
+      <li class="status-card">
+        <span class="status status-unreachable"><span class="status-dot" aria-hidden="true"></span>Unreachable</span>
+        <p>The latest poll did not return a sample. The card keeps the plain-language cause.</p>
+      </li>
+    </ul>
+  </section>
+{% endblock %}
